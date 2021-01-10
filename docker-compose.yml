@@ -1,0 +1,17 @@
+version: '3.2'
+
+services:
+  rstudio:
+    image: ex_rstudio/rstudio:1.0
+    build: ./rstudio
+    container_name: 'ex_rstudio'
+    working_dir: '/home/rstudio'
+    volumes:
+      - ./rstudio/shared:/home/rstudio/shared
+    ports: 
+      - 8787:8787
+    environment: 
+      - DISABLE_AUTH=true
+    stdin_open: true
+    tty: true
+
