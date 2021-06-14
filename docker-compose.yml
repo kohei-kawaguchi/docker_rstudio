@@ -2,9 +2,9 @@ version: '3.2'
 
 services:
   rstudio:
-    image: docker_patent/rstudio:1.0
+    image: docker_rstudio/rstudio:1.0
     build: ./rstudio
-    container_name: 'docker_patent'
+    container_name: 'docker_rstudio'
     working_dir: '/home/rstudio'
     volumes:
       - ./rstudio/shared:/home/rstudio/shared
